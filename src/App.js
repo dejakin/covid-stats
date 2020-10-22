@@ -6,8 +6,6 @@ import { getData } from './api/index';
 
 
 const App = () => {
-    
-    
     useEffect(() => {
         const data = async () => {
             const result = await getData();
