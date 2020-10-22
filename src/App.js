@@ -1,17 +1,21 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import './App.css';
 import { getData } from './api/index';
 
 
 const App = () => {
+    const [currentData, setData] = useState({
+        data: {}
+    })
+
     useEffect(() => {
-        const data = async () => {
+        const stats = async () => {
             const result = await getData();
-            console.log(result);
+            setData({ data: result });
         }
-        data();
+        stats();
     }, []);
     return (
         <div className="container">
