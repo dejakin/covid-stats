@@ -1,7 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 
-import './App.css';
+import classes from './App.module.css';
+import Cards from './components/Cards/Cards';
 import { getData } from './api/index';
 
 
@@ -17,9 +18,12 @@ const App = () => {
         }
         stats();
     }, []);
+
+    const { data } = currentData;
+
     return (
-        <div className="container">
-            <h1>App</h1>
+        <div className={classes.container}>
+            <Cards />
         </div>
     )
 }
