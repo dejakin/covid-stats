@@ -11,6 +11,8 @@ const App = () => {
         data: {}
     })
 
+    /* Once the App component is rendered, the stats function is delared and called, which
+    fetches the data from the API through getData and then loads the state with it */
     useEffect(() => {
         const stats = async () => {
             const result = await getData();
@@ -19,9 +21,11 @@ const App = () => {
         stats();
     }, []);
 
+    const { data } = currentData;
+
     return (
         <div className={classes.container}>
-            <Cards />
+            <Cards data={data} />
         </div>
     )
 }
