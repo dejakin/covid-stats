@@ -19,8 +19,6 @@ const App = () => {
         stats();
     }, []);
 
-    const { data } = currentData;
-
     return (
         <div className={classes.container}>
             <Cards />
