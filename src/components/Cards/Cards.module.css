@@ -5,3 +5,11 @@
 .card {
     margin: 0 2% !important;
 }
+
+.recovered {
+    border-bottom: 10px solid green;
+}
+
+.deaths {
+    border-bottom: 10px solid red;
+}
