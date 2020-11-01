@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 import classes from './App.module.css';
 import Cards from './components/Cards/Cards';
+import Chart from './components/Chart/Chart';
 import { getData } from './api/index';
 
 
@@ -26,6 +27,7 @@ const App = () => {
     return (
         <div className={classes.container}>
             <Cards data={data} />
+            <Chart />
         </div>
     )
 }

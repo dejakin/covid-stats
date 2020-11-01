@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'https://covid19.mathdro.id/api/';
+const url = 'https://covid19.mathdro.id/api';
 
 export const getData = async () => {
     try {
@@ -9,5 +9,14 @@ export const getData = async () => {
         return modifiedData;
     } catch(err) {
         console.log('Error has occured');
+    }
+}
+
+export const getDailyData = async () => {
+    try {
+        const { data } = await axios.get(`${url}/daily`);
+        return data;
+    } catch(err) {
+        
     }
 }
