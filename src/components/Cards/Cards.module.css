@@ -6,6 +6,10 @@
     margin: 0 2% !important;
 }
 
+.confirmed {
+    border-bottom: 10px solid yellow;
+}
+
 .recovered {
     border-bottom: 10px solid green;
 }
