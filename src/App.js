@@ -10,7 +10,8 @@ import { getData } from './api/index';
 
 const App = () => {
     const [currentData, setData] = useState({
-        data: {}
+        data: {},
+        country: ''
     })
 
     /* Once the App component is rendered, the stats function is delared and called, which
@@ -23,12 +24,16 @@ const App = () => {
         stats();
     }, []);
 
+    const countryChange = async (country) => {
+        console.log(country);
+    }
+
     const { data } = currentData;
 
     return (
         <div className={classes.container}>
             <Cards data={data} />
-            <CountryList />
+            <CountryList countryChange={countryChange} />
             <Chart />
         </div>
     )
