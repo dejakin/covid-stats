@@ -25,7 +25,8 @@ const App = () => {
     }, []);
 
     const countryChange = async (country) => {
-        console.log(country);
+        const result = await getData(country);
+        setData({ data: result, country: country })
     }
 
     const { data } = currentData;
