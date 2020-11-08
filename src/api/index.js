@@ -24,7 +24,9 @@ export const getDailyData = async () => {
 export const countries = async () => {
     try {
         const { data: { countries } } = await axios.get(`${url}/countries`);
-        return countries;
+
+        // Filter out other irrelevant data such as ISO2 and ISO3 name
+        return countries.map((country) => country.name);
     } catch(err) {
         console.log(err);
     }
