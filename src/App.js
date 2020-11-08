@@ -29,13 +29,13 @@ const App = () => {
         setData({ data: result, country: country })
     }
 
-    const { data } = currentData;
+    const { data, country } = currentData;
 
     return (
         <div className={classes.container}>
             <Cards data={data} />
             <CountryList countryChange={countryChange} />
-            <Chart />
+            <Chart data={data} country={country}/>
         </div>
     )
 }
