@@ -8,7 +8,7 @@ export const getData = async () => {
         const modifiedData = { confirmed, recovered, deaths, lastUpdate };
         return modifiedData;
     } catch(err) {
-        console.log('Error has occured');
+        console.log(err);
     }
 }
 
@@ -17,6 +17,15 @@ export const getDailyData = async () => {
         const { data } = await axios.get(`${url}/daily`);
         return data;
     } catch(err) {
-        
+        console.log(err);
+    }
+}
+
+export const countries = async () => {
+    try {
+        const { data: { countries } } = await axios.get(`${url}/countries`);
+        return countries;
+    } catch(err) {
+        console.log(err);
     }
 }
